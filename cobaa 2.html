@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Affiliate</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(255, 105, 180, 0.6), rgba(255, 105, 180, 0.6)), url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd53') center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      border: none;
+      background: #ff4d4d;
+      color: white;
+      cursor: pointer;
+    }
+
+    .products {
+      padding: 40px;
+    }
+
+    .products h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Style</h1>
+  <nav>
+    <a href="#">Home</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>Women's Wear</h2>
+    <p>Trend design terbaru</p>
+    <button onclick="scrollToProducts()">Shop Now</button>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <h2>Trending Products</h2>
+  <div class="grid">
+
+    <div class="card" onclick="openLink('https://vt.tokopedia.com/t/ZS9RSyTHtmqKR-0FZ88/
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+      <h3>Baju Cowok
+    </div>
+
+    <div class="card" onclick="openLink('https://tiktok.com')">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
+      <h3>Sepatu Keren</h3>
+    </div>
+
+    <div class="card" onclick="openLink('https://tiktok.com')">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+      <h3>Tas Fashion</h3>
+    </div>
+
+    <div class="card" onclick="openLink('https://tiktok.com')">
+      <img src="https://images.unsplash.com/photo-1526178613658-3f1622045557">
+      <h3>Aksesoris</h3>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Fashion Affiliate</p>
+</footer>
+
+<script>
+  function openLink(url) {
+    window.open(url, '_blank');
+  }
+
+  function scrollToProducts() {
+    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
